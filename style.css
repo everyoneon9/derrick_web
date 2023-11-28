@@ -56,6 +56,22 @@
 .header a:hover{
   color: grey;
 }
+/* i want to change paragraph margin but nothing change*/
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+p {
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
   /* perivous container
   .container {
     display: flex;
