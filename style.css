@@ -17,6 +17,7 @@
   justify-content: flex-end;
   margin-left: -60px;
   gap: 50px;  /*important */
+  position: relative
 }
 
 .header .logo {
@@ -57,11 +58,36 @@ p {
   margin-left: auto;
   margin-top: 24px;
   margin-bottom: 24px;
+  max-width: 730px;
 }
 
-.intro {
+h2{
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  max-width: 730px;
+  color: #3F3844;
+}
+
+.main {
   padding-right: 27px;
   padding-left: 27px;
   padding: 20px;
   margin: 0 auto;
 } 
+
+.about_content{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.pic_center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 50%;
+}
