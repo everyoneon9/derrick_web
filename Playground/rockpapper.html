@@ -4,6 +4,9 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css">
         <title> Derrick_web</title>
+
+        <button onclick="choose_paper()">Paper</button>
+        <p id="result"></p>
     </head>
 
     <script>
@@ -13,7 +16,24 @@
             return arr[(Math.floor(Math.random() * arr.length))]
         }
 
-        console.log(getComputerChoice())
+        function choose_paper() {
+            let draw;
+            let mon;
+
+            draw=getComputerChoice();
+            
+            if (draw=="paper"){
+                mon="Draw";
+            } else if (draw=="rock"){
+                mon="Win";
+            } else if (draw=="scissors"){
+                mon="lose";
+            } 
+            
+            document.getElementById("result").innerHTML = mon;
+        }
+
+
 
     </script>
 </html>>
