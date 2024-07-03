@@ -2,13 +2,34 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="playstyle.css">
         <title> Derrick_web</title>
 
-        <button onclick="choose_paper()">Paper</button>
-        <p id="result"></p>
+        
     </head>
+    
+    <body style="margin:0;">
+        <header class="header">
+            <div class="container">
+                <div class="logo">
+                    <a href="../index.html">Derrick_Web</a>
+                </div>
 
+                <div class="header_menu">
+                    <a href="Pages/Articles.html">My Articles</a>
+                    <a href="playground.html">Playground</a>
+                </div>
+
+                <div class="about">
+                    <a href="../Pages/About_me.html">About Me</a>
+                </div>
+            </div>
+        </header>
+        <button onclick="choose_paper()">Paper</button>
+        <button onclick="choose_rock()">Rock</button>
+        <button onclick="choose_scissors()">Scissors</button>
+        <p id="result"></p>    
+    </body>
     <script>
         let arr=["paper","rock","scissors"];
 
@@ -27,13 +48,44 @@
             } else if (draw=="rock"){
                 mon="Win";
             } else if (draw=="scissors"){
-                mon="lose";
+                mon="Lose";
+            } 
+            
+            document.getElementById("result").innerHTML = mon;
+        }
+        function choose_rock() {
+            let draw;
+            let mon;
+
+            draw=getComputerChoice();
+            
+            if (draw=="paper"){
+                mon="Lose";
+            } else if (draw=="rock"){
+                mon="Draw";
+            } else if (draw=="scissors"){
+                mon="Win";
+            } 
+            
+            document.getElementById("result").innerHTML = mon;
+        }
+        function choose_scissors() {
+            let draw;
+            let mon;
+
+            draw=getComputerChoice();
+            
+            if (draw=="paper"){
+                mon="Win";
+            } else if (draw=="rock"){
+                mon="Lose";
+            } else if (draw=="scissors"){
+                mon="Draw";
             } 
             
             document.getElementById("result").innerHTML = mon;
         }
 
 
-
     </script>
-</html>>
+</html>
